@@ -1,0 +1,120 @@
+﻿<Window x:Class="TestHarness.ClientWPF"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ClientWPF" Height="740" Width="600">
+    <Grid Height="680" VerticalAlignment="Bottom">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="160" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="40"  />
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid  Grid.Row="0">
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Width="647">
+                <Button Height="28" Width="160"  Background="Green" Margin="280,0" x:Name="btnOpenFile" VerticalAlignment="Center" HorizontalContentAlignment="Center" Click="btnOpenFile_Click" Content="Browse TestRequest XML"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel>
+                <!--<TextBox Name="txtEditor" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>-->
+                <TextBox x:Name="txtEditor" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+         ScrollViewer.VerticalScrollBarVisibility="Auto"
+         ScrollViewer.CanContentScroll="True" Height="160"/>
+                <!--<TextBox Name="txtEditor" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>-->
+                <!--<TextBox Name="txtEditor" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>-->
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="2">
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Width="647">
+                <Button Height="28" Width="160"   Background="Green"   Margin="280,6,280,0" x:Name="btnOpenFile1" VerticalAlignment="Top" HorizontalContentAlignment="Center" Click="SubmitToTH" Content="Submit To TestHarness"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="3">
+
+
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Width="647">
+                <Label Height="28" Width="250" Margin="240,6,240,0" Name="label1" VerticalAlignment="Top"
+             BorderThickness="1" Background="BlanchedAlmond" HorizontalContentAlignment="Center">
+                    Results from Test Harness
+                </Label>
+
+            </StackPanel>
+        </Grid>
+        <Grid  Grid.Row="4">
+
+            <StackPanel>
+                <!--<ListBox Name="listBox1" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+         ScrollViewer.VerticalScrollBarVisibility="Auto"
+         ScrollViewer.CanContentScroll="True"/>-->
+
+                <!--<TextBox x:Name="listBox1" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+         ScrollViewer.VerticalScrollBarVisibility="Auto"
+         ScrollViewer.CanContentScroll="True" Height="160"/>-->
+
+                <TextBox Name="textBoxResult" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                     ScrollViewer.VerticalScrollBarVisibility="Auto"
+                     ScrollViewer.CanContentScroll="True" Height="160"/>
+
+            </StackPanel>
+        </Grid>
+        <Grid  Grid.Row="5">
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Width="647">
+                <Label Height="28" Width="260" Margin="80,0" Name="label2" VerticalAlignment="Center"
+             BorderThickness="1" Background="Wheat" HorizontalContentAlignment="Center">
+                    Enter the Text to Query
+                </Label>
+                <TextBox Height="24" Margin="20,0,20,8" Name="RemotePortTextBox" VerticalAlignment="Bottom" Width="78"
+               HorizontalContentAlignment="Center"></TextBox>
+                <!--<Button Margin="20,0,20,8" x:Name="QueryButton"
+              Width="78" Click="QueryButton_listner" Height="24" VerticalAlignment="Bottom">Query</Button>-->
+                <!--<Button Height="24" Width="78"   Background="Green"   Margin="20,0,20,8" x:Name="btnOpenFile2" VerticalAlignment="Center" HorizontalContentAlignment="Center" Click="Query_listner" Content="Query"/>-->
+                <Button Height="24" Width="78" Margin="20,0,20,8" Name="QButton" Background="Green" VerticalAlignment="Center" HorizontalAlignment="Center" Click="QListner" Content="Query"></Button>
+            </StackPanel>
+
+
+
+
+        </Grid>
+        <Grid Grid.Row="6">
+
+            <!--<ListBox Name="listBox2" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+         ScrollViewer.VerticalScrollBarVisibility="Auto"
+         ScrollViewer.CanContentScroll="True"/>-->
+            <!--<TextBox Height="160" Name="QueryBox" VerticalAlignment="Center" 
+               HorizontalContentAlignment="Center" TextChanged="ResultBox_TextChanged"></TextBox>-->
+            <!--<TextBox x:Name="listBox2" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+         ScrollViewer.VerticalScrollBarVisibility="Auto"
+         ScrollViewer.CanContentScroll="True" Height="160"/>-->
+            <StackPanel>
+                <TextBox Name="textBoxRepo" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                   ScrollViewer.VerticalScrollBarVisibility="Auto"
+                     ScrollViewer.CanContentScroll="True" Height="160" TextChanged="textBoxRepo_TextChanged">
+
+
+                </TextBox>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="7">
+
+
+
+            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right" Width="647">
+                <Label Height="28" Width="260" Margin="80,0" Name="label3" VerticalAlignment="Center"
+             BorderThickness="1" Background="Wheat" HorizontalContentAlignment="Center">
+                    Time of Execution
+                </Label>
+                <TextBox Height="23" Margin="40,0" Name="TimerTextBox" VerticalAlignment="Center" Width="78"
+               HorizontalContentAlignment="Center"></TextBox>
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+
+</Window>
